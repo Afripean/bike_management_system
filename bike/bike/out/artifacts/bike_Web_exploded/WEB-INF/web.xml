@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         id="WebApp_ID" version="3.1">
+    <display-name>MyProject</display-name>
+    <!-- 设置访问系统时没有指定访问页面时默认的返回页面 -->
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <filter>
+        <filter-name>MyFilter</filter-name>
+        <filter-class>com.demo.util.LoginFilter</filter-class>
+    </filter>
+    <!--  设置过滤器拦截的范围，/*表示拦截所有请求 -->
+    <filter-mapping>
+        <filter-name>MyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>AuthServlet</servlet-name>
+        <servlet-class>com.demo.servlet.AuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AuthServlet</servlet-name>
+        <url-pattern>/AuthServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UserServlet</servlet-name>
+        <servlet-class>com.demo.servlet.UserServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserServlet</servlet-name>
+        <url-pattern>/UserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminServlet</servlet-name>
+        <servlet-class>com.demo.servlet.AdminServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminServlet</servlet-name>
+        <url-pattern>/AdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RegionServlet</servlet-name>
+        <servlet-class>com.demo.servlet.RegionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegionServlet</servlet-name>
+        <url-pattern>/RegionServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CheServlet</servlet-name>
+        <servlet-class>com.demo.servlet.CheServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheServlet</servlet-name>
+        <url-pattern>/CheServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>XiuServlet</servlet-name>
+        <servlet-class>com.demo.servlet.XiuServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>XiuServlet</servlet-name>
+        <url-pattern>/XiuServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NoticeServlet</servlet-name>
+        <servlet-class>com.demo.servlet.NoticeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoticeServlet</servlet-name>
+        <url-pattern>/NoticeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>NoticesServlet</servlet-name>
+        <servlet-class>com.demo.servlet.NoticesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NoticesServlet</servlet-name>
+        <url-pattern>/NoticesServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>MapServlet</servlet-name>
+        <servlet-class>com.demo.servlet.MapServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MapServlet</servlet-name>
+        <url-pattern>/MapServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+
